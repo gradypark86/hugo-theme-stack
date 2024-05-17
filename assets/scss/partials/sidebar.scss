@@ -154,9 +154,9 @@
 
 [data-scheme="dark"] {
     #dark-mode-toggle {
-        color: var(--accent-color);
-        font-weight: 700;
-
+        color: var(--accent-color-darker);
+        // font-weight: 700;
+        font-weight: bold;
         .icon-tabler-toggle-left {
             display: none;
         }
@@ -170,6 +170,7 @@
 #dark-mode-toggle {
     margin-top: auto;
     color: var(--body-text-color);
+    // color: red;
     display: flex;
     align-items: center;
     cursor: pointer;

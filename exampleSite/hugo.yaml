@@ -1,38 +1,38 @@
-baseurl: https://example.com
-languageCode: en-us
+baseurl: https://pprain.space
+languageCode: zh-cn
 theme: hugo-theme-stack
-paginate: 3
-title: Example Site
-copyright: Example Person
+paginate: 10
+title: PPRAIN.SPACE
+copyright: PPRAIN
 
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
-DefaultContentLanguage: en
+DefaultContentLanguage: zh-cn
 
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
 # This will make .Summary and .WordCount behave correctly for CJK languages.
-hasCJKLanguage: false
+hasCJKLanguage: true
 
-languages:
-    en:
-        languageName: English
-        title: Example Site
-        weight: 1
-        params:
-            description: Example description
-    zh-cn:
-        languageName: 中文
-        title: 演示站点
-        weight: 2
-        params:
-            description: 演示说明
-    ar:
-        languageName: عربي
-        languagedirection: rtl
-        title: موقع تجريبي
-        weight: 3
-        params:
-            description: وصف تجريبي
+# languages:
+#     en:
+#         languageName: English
+#         title: Example Site
+#         weight: 1
+#         params:
+#             description: Example description
+#     zh-cn:
+#         languageName: 中文
+#         title: 演示站点
+#         weight: 2
+#         params:
+#             description: 演示说明
+#     ar:
+#         languageName: عربي
+#         languagedirection: rtl
+#         title: موقع تجريبي
+#         weight: 3
+#         params:
+#             description: وصف تجريبي
 
 services:
     # Change it to your Disqus shortname before using
@@ -51,19 +51,20 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+    favicon: global.ico # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
 
     footer:
-        since: 2020
-        customText:
+        since: 2024
+        customText: 
 
     dateFormat:
-        published: Jan 02, 2006
-        lastUpdated: Jan 02, 2006 15:04 MST
+        published: 2006-01-02
+        lastUpdated: 2006-01-02 15:04
 
     sidebar:
-        emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        emoji: 💤
+        subtitle: 
+            "人要是无聊啊，鼻涕泡都能拿来玩会儿。"
         avatar:
             enabled: true
             local: true
@@ -73,13 +74,15 @@ params:
         math: false
         toc: true
         readingTime: true
+        wordCount: true
+        headingAnchor: true
         license:
             enabled: true
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
         enabled: true
-        provider: disqus
+        provider: twikoo
 
         disqusjs:
             shortname:
@@ -128,7 +131,7 @@ params:
                 placeholder:
 
         twikoo:
-            envId:
+            envId: https://service.pprain.space/twikoo
             region:
             path:
             lang:
@@ -208,18 +211,18 @@ params:
 menu:
     main: []
 
-    social:
-        - identifier: github
-          name: GitHub
-          url: https://github.com/CaiJimmy/hugo-theme-stack
-          params:
-              icon: brand-github
+    # social:
+    #     - identifier: github
+    #       name: GitHub
+    #       url: https://github.com/CaiJimmy/hugo-theme-stack
+    #       params:
+    #           icon: brand-github
 
-        - identifier: twitter
-          name: Twitter
-          url: https://twitter.com
-          params:
-              icon: brand-twitter
+    #     - identifier: twitter
+    #       name: Twitter
+    #       url: https://twitter.com
+    #       params:
+    #           icon: brand-twitter
 
 related:
     includeNewer: true

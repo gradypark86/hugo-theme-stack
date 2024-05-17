@@ -1,3 +1,4 @@
+<hr style="border: 2px dashed var(--hr-line-color); margin-bottom: 20px; margin-top: 20px;">
 <footer class="article-footer">
     {{ partial "article/components/tags" . }}
 
@@ -16,4 +17,29 @@
         </span>
     </section>
     {{- end -}}
+</footer>
+
+<hr style="border: 2px dashed var(--hr-line-color); margin-bottom: 20px; margin-top: 20px;">
+
+<footer class="article-footer">
+    <section class="navigation">
+        {{ if .Prev }}
+            <div class="prev">
+                <a class="arrow" href="{{ .Prev.Permalink }}">&larr;</a>
+                <div class="info">
+                    <a class="title" href="{{ .Prev.Permalink }}"> {{ .Prev.Title }}</a>
+                    <div class="date">{{ .Prev.Date.Format "2006-01-02" }}</div>
+                </div>
+            </div>
+        {{ end }}
+        {{ if .Next }}
+            <div class="next">
+                <div class="info">
+                    <a class="title" href="{{ .Next.Permalink }}"> {{ .Next.Title }}</a>
+                    <div class="date">{{ .Next.Date.Format "2006-01-02" }}</div>
+                </div>
+                <a class="arrow" href="{{ .Next.Permalink }}">&rarr;</a>
+            </div>
+        {{ end }}
+    </section>
 </footer>

@@ -81,6 +81,62 @@
                     box-shadow: unset;
                 }
             }
+
+            .custom-hr {
+                display: block;
+                width: 100%;
+                height: 2px;
+                /* 设置线条高度 */
+                background-color: #f3f4f9;
+                /* 设置线条颜色 */
+                border: none;
+                /* 移除默认边框 */
+                margin: 20px 0;
+                /* 上下20像素的外边距 */
+            }
+            .navigation {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .prev,
+            .next {
+                display: flex;
+                align-items: center;
+            }
+
+            .prev .info,
+            .next .info {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .next .info {
+                align-items: flex-end;
+            }
+
+            .arrow {
+                font-size: 24px;
+            }
+
+            .title {
+                font-size: 18px;
+            }
+
+            .date {
+                font-size: 12px;
+            }
+
+            .prev .arrow {
+                margin-right: 5px;
+                /* 根据需要调整 */
+            }
+
+            .next .arrow {
+                margin-left: 5px;
+                /* 根据需要调整 */
+            }
         }
     }
 }
@@ -452,11 +508,19 @@
 
     kbd {
         border: 1px solid var(--kbd-border-color);
+        background-color: var(--kbd-background-color);
         font-weight: bold;
         font-size: 0.9em;
         line-height: 1;
         padding: 2px 4px;
         border-radius: 4px;
         display: inline-block;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    mark {
+        background-color: var(--mark-background-color);
+        border-radius: 3px;
+        padding: 2px 4px;
     }
 }

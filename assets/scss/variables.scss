@@ -44,7 +44,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     --zh-font-family: "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei";
 
     --base-font-family: "Lato", var(--sys-font-family), var(--zh-font-family), sans-serif;
-    --code-font-family: Menlo, Monaco, Consolas, "Courier New", var(--zh-font-family), monospace;
+    --code-font-family: "FiraCode Nerd Font", "Fira Code", Menlo, Monaco, Consolas, "Courier New", var(--zh-font-family), monospace;
 }
 
 /*
@@ -61,7 +61,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 
     --card-border-radius: 10px;
 
-    --card-padding: 20px;
+    --card-padding: 18px;
 
     @include respond(md) {
         --card-padding: 25px;
@@ -124,6 +124,11 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     --tr-even-background-color: #efefee;
 
     --kbd-border-color: #dadada;
+    --kbd-background-color: #e4e4e7;
+
+    --mark-background-color: #f2d0fd;
+
+    --hr-line-color: #f3f4f9;
 
     &[data-scheme="dark"] {
         --code-background-color: #272822;
@@ -133,6 +138,13 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
         --tr-even-background-color: #545454;
 
         --blockquote-background-color: rgb(75 75 75);
+
+        --kbd-border-color: #dadada;
+        --kbd-background-color: #5a5a5a;
+
+        --mark-background-color: #e27af6;
+
+        --hr-line-color: #303030;
     }
 }
 

@@ -1,5 +1,6 @@
 {{ if .Params.Tags }}
     <section class="article-tags">
+        {{ partial "helper/icon" "tag" }}
         {{ range (.GetTerms "tags") }}
             <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
         {{ end }}
