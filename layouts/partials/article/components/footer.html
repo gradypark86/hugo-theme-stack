@@ -23,23 +23,34 @@
 
 <footer class="article-footer">
     <section class="navigation">
-        {{ if .Prev }}
-            <div class="prev">
-                <a class="arrow" href="{{ .Prev.Permalink }}">&larr;</a>
-                <div class="info">
-                    <a class="title" href="{{ .Prev.Permalink }}"> {{ .Prev.Title }}</a>
-                    <div class="date">{{ .Prev.Date.Format "2006-01-02" }}</div>
-                </div>
+        {{ if .PrevInSection }}
+        <div class="prev">
+            <a class="arrow" href="{{ .PrevInSection.Permalink }}">&larr;</a>
+            <div class="info">
+                <a class="title" href="{{ .PrevInSection.Permalink }}"> {{ .PrevInSection.Title }}</a>
+                <div class="date">{{ .PrevInSection.Date.Format "2006-01-02" }}</div>
             </div>
+        </div>
+        {{ else }}
+        <div class="prev">
+            <div class="arrow" >&larr;</div>
+            <div class="title" > 没有了</div>
+        </div>
         {{ end }}
-        {{ if .Next }}
-            <div class="next">
-                <div class="info">
-                    <a class="title" href="{{ .Next.Permalink }}"> {{ .Next.Title }}</a>
-                    <div class="date">{{ .Next.Date.Format "2006-01-02" }}</div>
-                </div>
-                <a class="arrow" href="{{ .Next.Permalink }}">&rarr;</a>
+
+        {{ if .NextInSection }}
+        <div class="next">
+            <div class="info">
+                <a class="title" href="{{ .NextInSection.Permalink }}"> {{ .NextInSection.Title }}</a>
+                <div class="date">{{ .NextInSection.Date.Format "2006-01-02" }}</div>
             </div>
+            <a class="arrow" href="{{ .NextInSection.Permalink }}">&rarr;</a>
+        </div>
+        {{ else }}
+        <div class="next">
+            <div class="title"> 没有了</div>
+            <div class="arrow" >&rarr;</div>
+        </div>
         {{ end }}
     </section>
 </footer>
